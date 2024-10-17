@@ -3,7 +3,7 @@ import './App.css';
 
 import React, { useState } from "react";
 import colorData from "./data/color-data.json";
-import ColorList from './components/ColoList';
+import ColorList from './components/ColorList';
 
 // export default function App() {
 //   return (
@@ -18,6 +18,10 @@ export default function App() {
   return (
     <ColorList
     colors={colors}
+    onRateColor = {(id,rating) => {
+      const newColors = colors.map(color => color.id === id? { ...color,rating } : color  );
+      setColors(newColors);
+    }}
     onRemoveColor = {id => {
       const newColors = colors.filter(color => color.id !== id);
       setColors(newColors);
