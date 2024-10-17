@@ -15,7 +15,15 @@ import ColorList from './components/ColoList';
 
 export default function App() {
   const [colors] = useState(colorData);
-  return <ColorList colors={colors} />;
+  return (
+    <ColorList
+    colors={colors}
+    onRemoveColor = {id => {
+      const newColors = colors.filter(color => color.id !== id);
+      setColors(newColors);
+    }}
+    />
+  );
 }
 
 
