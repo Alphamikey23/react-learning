@@ -14,7 +14,7 @@ import ColorList from './components/ColoList';
 // }
 
 export default function App() {
-  const [colors] = useState(colorData);
+  const [colors, setColors] = useState(colorData);
   return (
     <ColorList
     colors={colors}
