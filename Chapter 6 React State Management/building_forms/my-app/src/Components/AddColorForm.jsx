@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 
 export default function AddColorForm({ onNewColor = f => f }) {
     const [title, setTitle] = useState("");
