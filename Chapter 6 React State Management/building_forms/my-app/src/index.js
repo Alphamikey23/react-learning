@@ -1,5 +1,5 @@
 import React, {  createContext }from 'react';
-import colors from "./color-data";
+import colors from "./data/color-data.json";
 import { render } from "react-dom";
 
 import ReactDOM from 'react-dom/client';
