@@ -1,8 +1,10 @@
 import React , { useContext }from "react";
 import { ColorContext } from "./"
 import Color from "./Color";
+import { useColors } from "./color-hooks";
 
 export default function ColorList() {
+    const { colors } = useColors();
    
     return (
         <ColorContext.Consumer>
