@@ -1,5 +1,6 @@
-import React from "react";
-import { useInput } from "./hooks";
+//import React from "react";
+import React, { useState } from "react";
+import { useInput } from './CustomHook';
 
 export default function AddColorForm({ onNewColor = f => f }) {
     const [titleProps, resetTitle] = useInput("");
